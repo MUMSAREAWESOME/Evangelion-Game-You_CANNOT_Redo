@@ -147,7 +147,7 @@ int Battle(Player& player){
           player.Heal();
           continue;
         case 'c':
-          std::cout << "Your health: " << player.health << "\nEnemy health: " << enemy->health << "\nYour damage: " << player.weapon->damage << "\nYour heals left: " << player.inventory[0]->amount;
+          std::cout << "Your health: " << player.health << "\nEnemy health: " << enemy->health << "\nYour damage: " << player.weapon->damage << "\nYour heals left: " << player.inventory[0]->amount << '\n';
           continue;
         case 'f':
           std::cout << "You fled!\n";
