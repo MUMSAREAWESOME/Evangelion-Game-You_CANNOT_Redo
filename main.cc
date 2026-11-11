@@ -152,6 +152,7 @@ int Battle(Player& player){
         case 'f':
           std::cout << "You fled!\n";
           run = false;
+          win = 2;
           break;
         default:
           std::cout << "Could not find!\n";
