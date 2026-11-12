@@ -33,7 +33,7 @@ Weapon::Weapon(const int& Damage, const std::string& Name){
 }
 
 Enemy::Enemy(const int& Health, const int& Damage, const std::string& Name){
-      health = Health;
-      damage = Damage;
-      name = Name;
-    }
+    health = Health;
+    damage = Damage;
+    name = Name;
+}
