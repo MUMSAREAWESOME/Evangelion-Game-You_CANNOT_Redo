@@ -47,6 +47,7 @@ int main() {
             if (win == 0) break;
             else {
               std::cout << "You must win the battle to continue!\n";
+              shinji->health = 100;
               continue;
             }
           }
