@@ -16,7 +16,6 @@ void readLines(const std::string& chapPath){
   std::fstream file;
   file.open(chapPath, std::ios::in);
   std::string line;
-  wait();
   while (std::getline(file, line)){
     if (lines == 5) wait();
     std::cout << line << '\n';
