@@ -77,6 +77,7 @@ int main() {
       int win;
       switch (shinji->chapter){
         case 1:
+          std::cin.ignore();
           readLines("chapter1/p1.txt"); // Read part 1 of chapter 1
           while (true){
             win = Battle(*shinji);
@@ -91,6 +92,20 @@ int main() {
           readLines("chapter1/p3.txt"); // Read part 3 of chapter 1
           shinji->money += 15; // For reading my horrid writing!
           shinji->chapter ++;
+          break;
+        case 2:
+          std::cin.ignore();
+          readLines("chapter2/p1.txt");
+          std::cout << "What do you do? Take the shot [y/N]?";
+          char tmp;
+          std::cin >> tmp;
+          tmp = std::tolower(tmp);
+          if (tmp == 'y'){
+            // Read chapter 2 part 2
+          }
+          else{
+            // Read chapter 2 part 2 alt ver
+          }
           break;
         default:
           std::cout << "You are currently at an unreachable chapter! Resetting to start of the story!\n";
