@@ -53,6 +53,7 @@ int main() {
           }
           readLines("chapter1/p2.txt"); // Read part 2 of chapter 1
           readLines("chapter1/p3.txt"); // Read part 3 of chapter 1
+          shinji->chapter ++;
           break;
       }
     }
