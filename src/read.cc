@@ -6,10 +6,11 @@
 void wait(){
   char a;
   while (true){
+    std::cout << "Enter to continue: ";
     std::cin >> a;
     a = std::tolower(a);
     if (a == 'c') break;
-    else continue;
+    else break;
   }
 }
 
