@@ -17,6 +17,7 @@ int main() {
   char choice;
 
   while (true) {
+    std::cout << "(B)attle, (S)tory: ";
     std::cin >> choice;
     choice = std::tolower(choice);
     if (choice == 'b'){     
@@ -37,10 +38,18 @@ int main() {
         }
     }
     else if (choice == 's'){
+      int win;
       switch (shinji->chapter){
         case 1:
           readLines("chapter1/p1.txt"); // Read part 1 of chapter 1
-          Battle(*shinji);
+          while (true){
+            win = Battle(*shinji);
+            if (win == 0) break;
+            else {
+              std::cout << "You must win the battle to continue!\n";
+              continue;
+            }
+          }
           readLines("chapter1/p2.txt"); // Read part 2 of chapter 1
           readLines("chapter1/p3.txt"); // Read part 3 of chapter 1
           break;

@@ -20,10 +20,12 @@ void readLines(const std::string& chapPath){
   std::string line;
   while (std::getline(file, line)){
     if (lines == 10){
+      lines = 0;
       wait();
     }
     else{
       std::cout << line << '\n';
+      lines ++;
     }
   } 
 }
