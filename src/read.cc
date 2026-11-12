@@ -4,8 +4,11 @@
 #include <iostream>
 
 void wait(){
-  std::cout << "Enter to continue: ";
-  std::cin.ignore();
+  while (true){
+    std::cout << "Enter to continue: ";
+    std::cin.ignore();
+    break;
+  }
 }
 
 void readLines(const std::string& chapPath){
@@ -13,6 +16,7 @@ void readLines(const std::string& chapPath){
   std::fstream file;
   file.open(chapPath, std::ios::in);
   std::string line;
+  wait();
   while (std::getline(file, line)){
     if (lines == 5) wait();
     std::cout << line << '\n';
