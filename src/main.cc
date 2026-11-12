@@ -37,7 +37,7 @@ int main() {
             std::cout << "\033[35mHow the fuck did you somehow not win and also not loose or flee?\033[0m\n";
             break;
         }
-        break;
+        break;  
       case 's':
         switch (shinji->chapter){
           case 1:
