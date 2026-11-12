@@ -1,7 +1,6 @@
 #include "classes.h"
 #include <vector>
-#include <iostream>  
-#include <memory>
+#include <iostream>
 
 Item::Item(const std::string& Type, const int& Amount){
     type = Type;
@@ -24,7 +23,7 @@ Weapon::Weapon(const int& Damage, const std::string& Name){
         inventory[0]->amount --;
         std::cout << "\033[32mHealed to full health!\033[0m\n";
     }
-    else if (inventory[0]->amount > 0 && health == 100){
+    else if (inventory.front()->amount > 0 && health == 100){
         std::cout << "\033[31mFailed to heal! Already at max health\033[0m\n";
     }
     else{
