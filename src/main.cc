@@ -1,10 +1,8 @@
 #include "classes.h"
 #include "battle.h"
-#include <cctype>
+#include "read.h"
 #include <iostream>
 #include <memory>
-#include <random>
-#include <string>
 #include <vector>
 
 int main() {
@@ -31,6 +29,8 @@ int main() {
       std::cout << "\033[35mHow the fuck did you somehow not win and also not loose or flee?\033[0m\n";
       break;
   }
+
+  readLines(1);
   
   return 0;
 }
