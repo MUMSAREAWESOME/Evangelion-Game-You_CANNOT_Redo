@@ -8,7 +8,7 @@
 
 void shop(int& money, std::shared_ptr<Weapon>& weapon, std::shared_ptr<Item>& health){
   char choice;
-  std::cout << "(B)uy gun [50$], B(u)y a heal [1$]: ";
+  std::cout << "(B)uy gun [50$], B(u)y a heal [1$], (Q)uit: ";
   std::cin >> choice;
   choice = std::tolower(choice);
   switch (choice){
@@ -33,8 +33,10 @@ void shop(int& money, std::shared_ptr<Weapon>& weapon, std::shared_ptr<Item>& he
         std::cout << "You are too poor to afford one heal!\n";
       }
       break;
+    case 'q':
+      break;
     default:
-      std::cout << "Choice not recognisedn";
+      std::cout << "Choice not recognised!\n";
       break;
   }
 }
