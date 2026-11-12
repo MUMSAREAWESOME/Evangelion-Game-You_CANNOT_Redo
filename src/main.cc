@@ -9,6 +9,7 @@
 void shop(int& money, std::shared_ptr<Weapon>& weapon, std::shared_ptr<Item>& health){
   char choice;
   std::cout << "(B)uy gun [50$], B(u)y a heal [1$]: ";
+  std::cin >> choice;
   choice = std::tolower(choice);
   switch (choice){
     case 'b':
