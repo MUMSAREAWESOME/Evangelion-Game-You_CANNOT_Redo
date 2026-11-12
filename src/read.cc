@@ -13,16 +13,10 @@ void wait(){
   }
 }
 
-void readLines(const int& chapter){
+void readLines(const std::string& chapPath){
   int lines = 0;
   std::fstream file;
-  switch (chapter) {
-    case 1:
-      file.open("chapter1.txt", std::ios::in);
-      break;
-    default:
-      file.open("backstory.txt", std::ios::in);
-  }
+  file.open(chapPath, std::ios::in);
   std::string line;
   while (std::getline(file, line)){
     if (lines == 10){

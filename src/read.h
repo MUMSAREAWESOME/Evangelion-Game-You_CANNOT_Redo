@@ -1,5 +1,6 @@
 #pragma once
+#include <string>
 
 void wait();
 
-void readLines(const int& chapter);
+void readLines(const std::string& chapPath);
