@@ -26,6 +26,7 @@ class Player {
         int health;
         std::shared_ptr<Weapon> weapon;
         int chapter {1};
+        bool badEnding;
         int money {0};
 
     Player(const std::string& Name, const int& Health);

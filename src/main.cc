@@ -75,6 +75,7 @@ int main() {
     }
     else if (choice == 'r'){
       int win;
+      char tmp;
       switch (shinji->chapter){
         case 1:
           std::cin.ignore();
@@ -97,15 +98,18 @@ int main() {
           std::cin.ignore();
           readLines("chapter2/p1.txt");
           std::cout << "What do you do? Take the shot [y/N]?";
-          char tmp;
           std::cin >> tmp;
           tmp = std::tolower(tmp);
           if (tmp == 'y'){
-            // Read chapter 2 part 2
+            shinji->badEnding = false;
+            readLines("chapter2/p2.txt");
           }
           else{
-            // Read chapter 2 part 2 alt ver
+            shinji->badEnding = true;
+            readLines("chapter2/p2-alt.txt");
           }
+          shinji->money += 15;
+          shinji->chapter ++;
           break;
         default:
           std::cout << "You are currently at an unreachable chapter! Resetting to start of the story!\n";
